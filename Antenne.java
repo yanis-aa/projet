@@ -8,7 +8,8 @@ public class Antenne {
 	private String polarisation;
 	private double orientation;
 	private double ouverture;
-	private double 
+	private double teta;
+	
 	public double getPe() {
 		return Pe;
 	}
@@ -18,7 +19,7 @@ public class Antenne {
 	public double getPr() {
 		return Pr;
 	}
-	public void setPR(double Pr) {
+	public void setPr(double Pr) {
 		this.Pr = Pr;
 	}
 	public double getFrequence() {
@@ -49,7 +50,14 @@ public class Antenne {
 		return ouverture;
 	}
 	public void setOuverture(double ouverture) {
+	
 		this.ouverture = ouverture;
+	}
+	public double getTeta() {
+		return teta;
+	}
+	public void setTeta(double teta) {
+		this.teta = teta;
 	}
 
 public Antenne (double Pe, double Pr,  double frequence, double sensibilite, String polarisation, double orientation, double ouverture) {
@@ -62,7 +70,7 @@ this.orientation=orientation;
 this.ouverture=ouverture;	
 }
 
-public void liste(Antenne antenne) {
+/*public void liste(Antenne antenne) {
 	System.out.println(getPe());
 	System.out.println(getFrequence());
 	System.out.println(getSensibilite());
@@ -70,13 +78,14 @@ public void liste(Antenne antenne) {
 	System.out.println(getOrientation());
 	System.out.println(getOuverture());
 	
-}
-public void  joignable( Antenne antenne) {
+}*/
+/*public   joignable( Antenne antenne) {
 	
 	
 
-	//Pr=Pe+20log(λ/4 πR ) +Ge dB (θ)+Gr dB (θ )+Ep;
+	Pr=Pe+20log(λ/4 πR ) +Ge dB (teta)+Gr dB (teta)+Ep;
 	
 }
+*/
 }
 
