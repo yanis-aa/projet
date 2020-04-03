@@ -1,6 +1,16 @@
 
 public class Antenne {
 	
+	
+	
+	  
+	private static final double π= 3.14;
+	private static double r;
+	private static double ep;
+    private static double λ;
+    private static double Ge;
+    private static double Gr;
+
 	private double Pe;
 	private double Pr;
 	private double frequence;
@@ -68,24 +78,29 @@ this.sensibilite=sensibilite;
 this.polarisation=polarisation;
 this.orientation=orientation;
 this.ouverture=ouverture;	
+
 }
 
-/*public void liste(Antenne antenne) {
-	System.out.println(getPe());
-	System.out.println(getFrequence());
-	System.out.println(getSensibilite());
-	System.out.println(getPolarisation());
-	System.out.println(getOrientation());
-	System.out.println(getOuverture());
-	
-}*/
-/*public   joignable( Antenne antenne) {
-	
-	
 
-	Pr=Pe+20log(λ/4 πR ) +Ge dB (teta)+Gr dB (teta)+Ep;
+public String Joindre (Antenne antenne) {
 	
+	
+	r=100;
+	Ge=20;
+	Gr=4;
+	λ=1/2;
+
+Pr=Pe+20*Math.log(λ/4*π*r ) +Ge +Gr +ep;
+
+
+if (antenne.getSensibilite() < Pr ) {
+	return "true";
 }
-*/
+	else {
+		return "false";
+	}
 }
+}
+
+
 
