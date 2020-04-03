@@ -1,4 +1,3 @@
-
 public class Antenne {
 	
 	
@@ -94,17 +93,17 @@ this.ouverture=ouverture;
 
 }
 //fonction qui permet dafficher les caractéristiques d'une antenne
-public void affiche(){	
-System.out.println(antenne1.getPe());
-System.out.println(antenne1.getPr());	
-System.out.println(antenne1.getFrequence());
-System.out.println(antenne1.getSensibilite());
-System.out.println(antenne1.getPolarisation());
-System.out.println(antenne1.getOrientation());
-System.out.println(antenne1.getOuverture());
+public void affiche(Antenne antenne){	
+System.out.println(antenne.getPe());
+System.out.println(antenne.getPr());	
+System.out.println(antenne.getFrequence());
+System.out.println(antenne.getSensibilite());
+System.out.println(antenne.getPolarisation());
+System.out.println(antenne.getOrientation());
+System.out.println(antenne.getOuverture());
 	
 }
-public String Joindre (Antenne antenne1 Antenne antenne2) {
+public String Joindre (Antenne antenne1, Antenne antenne2) {
 	
 	
 	r=100;
@@ -115,7 +114,7 @@ public String Joindre (Antenne antenne1 Antenne antenne2) {
 Pr=Pe+20*Math.log(λ/4*π*r ) +Ge +Gr +ep;
 
 
-if (antenne1.Sensibilite < antenne2.Pr ) {
+if (antenne1.sensibilite < antenne2.Pr ) {
 	return "true";
 }
 	else {
@@ -123,6 +122,5 @@ if (antenne1.Sensibilite < antenne2.Pr ) {
 	}
 }
 }
-
 
 
