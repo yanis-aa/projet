@@ -94,9 +94,14 @@ this.ouverture=ouverture;
 
 }
 //fonction qui permet dafficher les caractéristiques d'une antenne
-public void affiche(){
-	
-	
+public void affiche(){	
+System.out.println(antenne1.getPe());
+System.out.println(antenne1.getPr());	
+System.out.println(antenne1.getFrequence());
+System.out.println(antenne1.getSensibilite());
+System.out.println(antenne1.getPolarisation());
+System.out.println(antenne1.getOrientation());
+System.out.println(antenne1.getOuverture());
 	
 }
 public String Joindre (Antenne antenne1 Antenne antenne2) {
