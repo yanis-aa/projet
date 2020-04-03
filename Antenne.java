@@ -5,11 +5,11 @@ public class Antenne {
 	
 	  
 	private static final double π= 3.14;
-	private static double r;
-	private static double ep;
-    private static double λ;
-    private static double Ge;
-    private static double Gr;
+	private  double r;
+	private  double ep;
+    private  double λ;
+    private  double Ge;
+    private double Gr;
 
 	private double Pe;
 	private double Pr;
@@ -20,6 +20,24 @@ public class Antenne {
 	private double ouverture;
 	private double teta;
 	
+	public double getR(){
+		return r;
+	}
+	public void setR(){
+		this.r=r;
+	}
+	public double getλ(){
+		return λ;
+	}
+	public void setλ(){
+		this.λ=λ;
+	}
+	public double getEp(){
+		return ep;
+	}
+	public void setEp(){
+		this.ep=ep;
+	}
 	public double getPe() {
 		return Pe;
 	}
@@ -63,12 +81,7 @@ public class Antenne {
 	
 		this.ouverture = ouverture;
 	}
-	public double getTeta() {
-		return teta;
-	}
-	public void setTeta(double teta) {
-		this.teta = teta;
-	}
+	
 
 public Antenne (double Pe, double Pr,  double frequence, double sensibilite, String polarisation, double orientation, double ouverture) {
 this.Pe=Pe;
@@ -82,7 +95,7 @@ this.ouverture=ouverture;
 }
 
 
-public String Joindre (Antenne antenne) {
+public String Joindre (Antenne antenne1 Antenne antenne2) {
 	
 	
 	r=100;
@@ -93,7 +106,7 @@ public String Joindre (Antenne antenne) {
 Pr=Pe+20*Math.log(λ/4*π*r ) +Ge +Gr +ep;
 
 
-if (antenne.getSensibilite() < Pr ) {
+if (antenne1.Sensibilite < antenne2.Pr ) {
 	return "true";
 }
 	else {
