@@ -93,8 +93,12 @@ this.orientation=orientation;
 this.ouverture=ouverture;	
 
 }
-
-
+//fonction qui permet dafficher les caractéristiques d'une antenne
+public void affiche(){
+	
+	
+	
+}
 public String Joindre (Antenne antenne1 Antenne antenne2) {
 	
 	
